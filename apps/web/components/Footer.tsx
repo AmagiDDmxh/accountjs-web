@@ -1,7 +1,5 @@
 import { ComponentProps } from "react"
 import cx from "clsx"
-import Image from "next/image"
-import rebaseLogoPng from "../images/logos/rebasedventures.png"
 
 type NavigationIcon = (props: ComponentProps<"svg">) => JSX.Element
 type NavigationItem = {
@@ -24,7 +22,7 @@ const navigation: Navigation = {
     },
     {
       name: "GitHub",
-      href: "#",
+      href: "//github.com/accountjs",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -77,7 +75,7 @@ const navigation: Navigation = {
 export const Footer = () => {
   return (
     <footer className="">
-      <div className="flex flex-col items-center md:flex-row md:justify-between mx-auto max-w-7xl overflow-hidden pb-20 px-6 sm:pb-24 lg:px-8 space-y-6 md:space-y-4">
+      <div className="flex flex-col items-center mx-auto max-w-7xl overflow-hidden pb-20 px-6 sm:pb-24 lg:px-8 space-y-6 md:space-y-4">
         <div className="flex justify-center">
           {navigation.social.map((item) => (
             <a
@@ -94,26 +92,6 @@ export const Footer = () => {
               )}
             </a>
           ))}
-        </div>
-        <div className="flex justify-center items-center gap-2.5 flex-1">
-          <span className="text-sm text-gray-500 font-normal">Backed by</span>
-          <a
-            href="//rebased.ventures/"
-            className="flex items-center gap-1"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image
-              className="h-6 w-6"
-              src={rebaseLogoPng}
-              width={24}
-              height={24}
-              alt="Rebase D. Ventures"
-            />
-            <span className="text-sm bg-gradient-to-br bg-clip-text text-transparent from-green-400 to-green-600 inline-block text-sm text-gray-500 font-semibold">
-              Rebase D.Ventures
-            </span>
-          </a>
         </div>
         <p className="mt-2 text-center text-sm leading-5 text-gray-500 ">
           &copy; {new Date().getFullYear()} Account.js. All rights reserved.
