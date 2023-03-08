@@ -51,7 +51,7 @@ export const Header = () => {
     <header>
       <nav>
         <Container className="relative z-50 flex justify-between py-8">
-          <div className="relative z-10 flex items-center gap-16">
+          <div className="relative z-10 flex items-center gap-16 pl-2 sm:pl-0">
             <Link href="/" aria-label="Home">
               <Logo className="h-10" />
             </Link>
@@ -96,7 +96,7 @@ export const Header = () => {
                             y: -32,
                             transition: { duration: 0.2 },
                           }}
-                          className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-gray-50 px-6 pb-6 pt-32 shadow-2xl shadow-gray-900/20"
+                          className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-gray-50 px-6 pb-6 pt-28 shadow-2xl shadow-gray-900/20"
                         >
                           {headerNvigations.map(([title, href]) => (
                             <MobileNavLink href={href} key={title}>

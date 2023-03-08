@@ -9,7 +9,7 @@ export function Hero() {
             <span className="text-green-400">Safest</span>{" "}
             <span className="text-amber-400">DAPP Project</span>
           </h1>
-          <p className="md:mt-4 mt-6 md:text-lg text-base mx-16 leading-8 text-gray-600">
+          <p className="md:mt-4 mt-6 md:text-lg text-base mx-16 leading-8 text-gray-700">
             Effortless and Powerful Integration for DAPP Development
           </p>
         </div>

@@ -1,5 +1,7 @@
-import { ComponentProps } from "react"
+import { ComponentProps, useRef } from "react"
 import cx from "clsx"
+import Lottie, { LottieRef } from "lottie-react"
+import mailLottie from "../images/lottie-icon/email.json"
 
 type NavigationIcon = (props: ComponentProps<"svg">) => JSX.Element
 type NavigationItem = {
@@ -8,6 +10,38 @@ type NavigationItem = {
   icon?: NavigationIcon
 }
 type Navigation = Record<string, NavigationItem[]>
+
+const MailIcon = (props: any) => {
+  const lottieRef: LottieRef = useRef(null)
+
+  const handleMouseEnter = () => {
+    lottieRef.current?.play()
+  }
+
+  const handleMouseLeave = () => {
+    lottieRef.current?.stop()
+  }
+
+  return (
+    <Lottie
+      {...props}
+      lottieRef={lottieRef}
+      animationData={mailLottie}
+      loop={false}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      interactivity={{
+        actions: [
+          {
+            type: "play",
+            frames: [0, 1],
+          },
+        ],
+        mode: "cursor",
+      }}
+    />
+  )
+}
 
 const navigation: Navigation = {
   social: [
@@ -68,6 +102,11 @@ const navigation: Navigation = {
           </defs>
         </svg>
       ),
+    },
+    {
+      name: "Mail",
+      href: "mailto:team@accountjs.xyz",
+      icon: MailIcon,
     },
   ],
 }
