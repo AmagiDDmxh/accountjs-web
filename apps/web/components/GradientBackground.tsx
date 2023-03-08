@@ -3,6 +3,7 @@ import gradientStyles from "./GradientBackground.module.css"
 
 const gradientFromColor = "#fc7b7b5e"
 const gradientToColor = "#2fff5a2e"
+const gradientScale = 80
 
 export const GradientBackground = () => {
   const gradientRef = useRef<HTMLDivElement | null>(null)
@@ -15,8 +16,8 @@ export const GradientBackground = () => {
       const windowWidth = window.outerWidth
       const windowHeight = window.outerHeight
 
-      const mouseXpercentage = Math.round((event.pageX / windowWidth) * 100)
-      const mouseYpercentage = Math.round((event.pageY / windowHeight) * 100)
+      const mouseXpercentage = Math.round((event.pageX / windowWidth) * gradientScale)
+      const mouseYpercentage = Math.round((event.pageY / windowHeight) * gradientScale)
 
       gradientRef.current!.style.background = `radial-gradient(at ${mouseXpercentage}% ${mouseYpercentage}%, ${gradientFromColor}, ${gradientToColor})`
     }
