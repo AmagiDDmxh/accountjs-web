@@ -121,6 +121,8 @@ export const Footer = () => {
               key={item.name}
               href={item.href}
               className="text-black/30 hover:text-black/80 transition ease-in-out duration-200 p-3 md:p-2 md:mx-2"
+              target="_blank"
+              rel="noreferrer"
             >
               <span className="sr-only">{item.name}</span>
               {item.icon && (
