@@ -6,7 +6,7 @@ export const Logo = (props: ComponentProps<"div">) => {
     <div
       {...props}
       className={cx(
-        "flex items-center gap-2 text-gray-700 transition-all delay-75 hover:text-black hover:delay-[0ms]",
+        "flex items-center gap-2 text-gray-700 transition-all delay-75 hover:text-black hover:delay-[0ms] hover:animate-color",
         props.className,
       )}
     >

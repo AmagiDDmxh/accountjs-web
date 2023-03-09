@@ -26,7 +26,7 @@ const iOsHeight = plugin(function ({ addUtilities }) {
 module.exports = {
   content: [
     "./components/**/*.{js,ts,jsx,tsx}",
-    "./pages/**/*.{js,ts,jsx,tsx}"
+    "./pages/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -72,14 +72,18 @@ module.exports = {
         sans: ["var(--font-inter)", ...fontFamily.sans],
       },
       keyframes: {
-        shine: {
-          "0%": { backgroundPosition: "-100%" },
-          "100%": { backgroundPosition: "100%" },
+        color: {
+          "0%": { color: "#f87171" },
+          "16.6%": { color: "#facc15" },
+          "33.3%": { color: "#34d399" },
+          "50%": { color: "#60a5fa" },
+          "66.6%": { color: "#e879f9" },
+          "83.3%": { color: "#f472b6" },
+          "100%": { color: "#f87171" },
         },
-        dash: {
-          "0%": { strokeDashoffset: 1000 },
-          "100%": { strokeDashoffset: 0 },
-        },
+      },
+      animation: {
+        color: "color 2s cubic-bezier(0.4, 0, 0.2, 1) infinite",
       },
     },
   },
