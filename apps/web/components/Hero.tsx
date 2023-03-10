@@ -9,7 +9,8 @@ export function Hero() {
             <span className="text-green-400">Safest</span>{" "}
             <span className="text-amber-400">DAPP Project</span>
           </h1>
-          <p className="md:mt-4 mt-6 md:text-lg text-base mx-16 leading-8 text-gray-700">
+
+          <p className="md:mt-4 mt-6 md:text-lg text-base mx-16 leading-6 text-gray-700">
             <span className="text-emerald-500">Effortless</span> and{" "}
             <span className="text-purple-500">Powerful Integration</span> for{" "}
             <span className="text-orange-400">DAPP Development</span> with{" "}
